@@ -27,25 +27,25 @@ public class LoginPasswordAdapter extends ArrayAdapter<LoginPassword> {
         View v = convertView;
         if (v == null) {
             LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = vi.inflate(R.layout.team, null);
+            v = vi.inflate(R.layout.pass_adapter, null);
         }
 
         LoginPassword loginPassword = loginPasswords.get(position);
 
         if (loginPassword != null) {
-            TextView pos = (TextView) v.findViewById(R.id.position);
-            TextView name = (TextView) v.findViewById(R.id.name);
-            TextView wins = (TextView) v.findViewById(R.id.wins);
-            TextView draws = (TextView) v.findViewById(R.id.draws);
-            TextView losses = (TextView) v.findViewById(R.id.losses);
-            TextView points = (TextView) v.findViewById(R.id.points);
+            TextView passPosition = (TextView) v.findViewById(R.id.position);
+            TextView nomService = (TextView) v.findViewById(R.id.nomService);
+            TextView typeLogin = (TextView) v.findViewById(R.id.typeLogin);
+            TextView login = (TextView) v.findViewById(R.id.login);
+            TextView password = (TextView) v.findViewById(R.id.password);
+            TextView commentaires = (TextView) v.findViewById(R.id.commentaires);
 
-            pos.setText(String.valueOf(o.getPosition()));
-            name.setText(String.valueOf(o.getName()));
-            wins.setText(String.valueOf(o.getWins()));
-            draws.setText(String.valueOf(o.getDraws()));
-            losses.setText(String.valueOf(o.getLosses()));
-            points.setText(String.valueOf(o.getPoints()));
+            passPosition.setText(String.valueOf(loginPassword.getPosition()));
+            nomService.setText(String.valueOf(loginPassword.getNomService()));
+            typeLogin.setText(String.valueOf(loginPassword.getType()));
+            login.setText(String.valueOf(loginPassword.getLogin()));
+            password.setText(String.valueOf(loginPassword.getPassword()));
+            commentaires.setText(String.valueOf(loginPassword.getCommentaire()));
         }
         return v;
     }
