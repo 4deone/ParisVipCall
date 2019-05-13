@@ -6,19 +6,11 @@ public class LoginPassword {
     private String nomService;
     private String login;
     private String password;
-    private TypeLoginPassword type;
+    private String type;
     private String commentaire;
 
-    public LoginPassword(int position, String nomService, String login, String password, TypeLoginPassword type, String commentaire) {
+    public LoginPassword(int position, String nomService, String login, String password, String type, String commentaire) {
         this.position = position;
-        this.nomService = nomService;
-        this.login = login;
-        this.password = password;
-        this.type = type;
-        this.commentaire = commentaire;
-    }
-
-    public LoginPassword(String nomService, String login, String password, TypeLoginPassword type, String commentaire) {
         this.nomService = nomService;
         this.login = login;
         this.password = password;
@@ -58,11 +50,11 @@ public class LoginPassword {
         this.password = password;
     }
 
-    public TypeLoginPassword getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(TypeLoginPassword type) {
+    public void setType(String type) {
         this.type = type;
     }
 
